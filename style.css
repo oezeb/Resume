@@ -1,0 +1,41 @@
+h1, h2, h3, h4, p, li, span {
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+p, li, span {
+    font-size: 1em;
+    font-weight: normal;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/*#myname {
+    font-size: 3em;
+    font-weight: normal;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+#major {
+    font-size: x-small;
+}*/
+
