@@ -1,26 +1,32 @@
-h1, h2, h3, h4, p, li, span {
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-}
-
-h1, h2, h3, h4 {
-    font-weight: bold;
+/*General config*/
+html, body, span, div, p, li  {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    font-weight: normal;
+    color: #1a1a1a;
+    background-color: #fdfdfd;
 }
 
 h1 {
     font-size: 3em;
+    font-weight: normal;
 }
 
-h2 {
-    font-size: 1.4em;
+h1 > div {
+    font-size: 0.25em; 
+    font-weight: normal;
 }
 
-h3 {
+h2, h3 {
     font-size: 1.2em;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: bold;
 }
 
 p, li, span {
-    font-size: 1em;
-    font-weight: normal;
     text-align: justify;
 }
 
@@ -29,13 +35,90 @@ a {
     font-weight: normal;
 }
 
-/*#myname {
-    font-size: 3em;
-    font-weight: normal;
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+/*
+div {
+    border-style: solid;
+    border-width: 1px;
+}
+*/
+
+/*Photo ID*/
+
+.photo-id > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.5em;
+    border-color: #548AB7;
 }
 
-#major {
-    font-size: x-small;
-}*/
+/*summary*/
 
+.summary > h2 {
+    color: #548AB7;
+}
+
+.summary > p {
+    text-align: left;
+}
+
+/*contact*/
+
+.contact > h2 {
+    color: #548AB7;
+}
+
+.contact > div > div {
+    margin-bottom: 1em;
+}
+
+/*skills*/
+
+.skills > h2 {
+    color: #548AB7;
+}
+
+.skills > table > thead {
+    display: none;
+}
+
+.skills > table > tbody > tr > th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.2em 1em;
+}
+
+.skills > table > tbody > tr > td {
+    text-align: center;
+    padding: 0.2em 1em;
+}
+
+/*Grid Layout*/
+
+.header {
+    grid-area: header;
+}
+
+.left {
+    grid-area: left;
+    padding: 1em;
+}
+
+.right {
+    grid-area: right;
+    padding: 1em;
+}
+
+.grid-container {
+    max-width:min-content;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      'left header'
+      'left right'
+      'left right'
+      'left right';
+    grid-template-columns: 40% 60%;
+    padding: 1em 0;
+}
