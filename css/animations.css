@@ -1,0 +1,63 @@
+@import "animate.css";
+
+/*
+ * Entrance
+ */
+
+.header, .left, .footer, .line {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.photo-id  {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    animation-name: flip;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.title {
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+h2, h3, h4, ul,  p, table, .contact div {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+/*hover*/
+
+.photo-id img { transition: transform .5s ease; }
+
+.photo-id:hover img { transform: scale(1.5); }
+
+h1 { transition: text-shadow .5s ease; }
+
+h1:hover { text-shadow: 5px -5px 5px black; }
+
+h2 { transition: font-size .5s ease; }
+
+h2:hover { font-size: 2em; }
+
+table tr { transition: background-color .5s ease; }
+
+table tr:hover { background-color: #548AB7; }
