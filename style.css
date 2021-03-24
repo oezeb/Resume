@@ -8,22 +8,16 @@ html, body, span, div, p, li  {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 4em;
     font-weight: normal;
 }
 
-h1 > div {
-    font-size: 0.25em; 
-    font-weight: normal;
+h1 > #major {
+    font-size: 0.25em;
 }
 
-h2, h3 {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-h4 {
-    font-weight: bold;
+h3 {
+    font-size: 1em;
 }
 
 p, li, span {
@@ -35,49 +29,60 @@ a {
     font-weight: normal;
 }
 
+table {
+    width: 100%;
+}
+
+table > thead {
+    display: none;
+}
+
+table > tbody > tr > th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.2em 1em;
+}
+
+table > tbody > tr > td {
+    text-align: center;
+    padding: 0.2em 1em;
+}
+
 /*
 div {
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid;
 }
 */
+/*left*/
+
+.left > div > div > h2 {
+    color: #548AB7;
+}
 
 /*Photo ID*/
 
+.photo-id {
+    padding: 0 1em 1em 0;
+}
+
 .photo-id > img {
-    max-width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: 80% !important;
+    border: solid 0.5em #548AB7;
     border-radius: 50%;
-    border-style: solid;
-    border-width: 0.5em;
-    border-color: #548AB7;
+    object-fit: cover;
+    margin: 10% 0;
 }
 
 /*summary*/
 
-.summary > h2 {
-    color: #548AB7;
-}
-
-.summary > p {
-    text-align: left;
-}
-
 /*contact*/
-
-.contact > h2 {
-    color: #548AB7;
-}
 
 .contact > div > div {
     margin-bottom: 1em;
 }
 
 /*skills*/
-
-.skills > h2 {
-    color: #548AB7;
-}
 
 .skills > table > thead {
     display: none;
@@ -94,31 +99,54 @@ div {
     padding: 0.2em 1em;
 }
 
+/*right*/
+
+.right > div > .line {
+    height: 1.5px;
+    background-color: #548AB7;
+}
+
+.right > div > h2 {
+    margin-bottom: 0%;
+}
+
+/*languages*/
+
+.languages > table {
+    margin-top: 1em;
+}
+
 /*Grid Layout*/
-
-.header {
-    grid-area: header;
+.grid-container {
+    max-width:60%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        'left header'
+        'left right'
+        'left right'
+        'left right';
+    grid-template-columns: 40% 60%;
+    padding: 1em 0;
 }
 
-.left {
-    grid-area: left;
-    padding: 1em;
-}
+.header { grid-area: header; }
 
 .right {
     grid-area: right;
     padding: 1em;
 }
 
-.grid-container {
-    max-width:min-content;
-    margin: auto;
+.left {
+    grid-area: left;
+    padding: 1em;
     display: grid;
-    grid-template-areas:
-      'left header'
-      'left right'
-      'left right'
-      'left right';
-    grid-template-columns: 40% 60%;
-    padding: 1em 0;
+    grid-template-areas: 
+        'photo-id'
+        'doc';
+    grid-template-rows: 40% 60%;
 }
+
+.photo-id { grid-area: photo-id; }
+
+.doc { grid-area: doc;}
